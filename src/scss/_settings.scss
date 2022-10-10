@@ -19,6 +19,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  background-color: #f5f5f5;
 }
 
 img {
@@ -104,4 +105,14 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.heading-reset {
+  margin: 0;
+  padding: 0;
+}
+
+.button-reset {
+  background-color: transparent;
+  border: none;
 }

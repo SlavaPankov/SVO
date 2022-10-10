@@ -6,11 +6,9 @@
 
 // подключения компонентов страницы
 @import "./components/header";
-
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
+@import "./components/banner";
+@import "./components/categories";
+@import "./components/hits";
+@import "./components/news";
+@import "./components/discounts";
+@import "./components/footer";

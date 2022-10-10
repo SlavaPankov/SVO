@@ -1,3 +1,89 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__container">
+    <div class="header__top header-top">
+      <a href="/" class="header__logo logo">
+        <picture>
+          <source srcset="/img/logo.avif" type="image/avif">
+          <source srcset="/img/logo.webp" type="image/webp">
+          <img loading="lazy" src="/img/logo.png" class="image" width="270" height="90" alt="Логотип">
+        </picture>
+      </a>
+      <nav class="nav header__social header-social" title="Социальные сети">
+        <ul class="nav__list list-reset header-social__list">
+          <li class="nav__item header-social__item">
+            <a href="#" class="nav__link header-social__link">
+              <svg class="header-social__icon">
+                <use xlink:href="img/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="nav__item header-social__item">
+            <a href="#" class="nav__link header-social__link">
+              <svg class="header-social__icon">
+                <use xlink:href="img/sprite.svg#whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__bottom header-bottom">
+      <nav class="nav header__nav header-nav" title="Навигация">
+        <ul class="nav__list list-reset header-nav__list">
+          <li class="nav__item header-nav__item">
+            <button class="header__burger burger" aria-label="Открыть меню" data-burger>
+                <span class="burger__line"></span>
+            </button>
+            <a href="#" class="nav__link header-nav__link">
+              Каталог
+            </a>
+          </li>
+          <li class="nav__item header-nav__item">
+            <a href="#" class="nav__link header-nav__link">
+              Акции и скидки
+            </a>
+          </li>
+          <li class="nav__item header-nav__item">
+            <a href="#" class="nav__link header-nav__link">
+              О компании
+            </a>
+          </li>
+          <li class="nav__item header-nav__item">
+            <a href="#" class="nav__link header-nav__link">
+              Доставка и полата
+            </a>
+          </li>
+          <li class="nav__item header-nav__item">
+            <a href="#" class="nav__link header-nav__link">
+              Где купить
+            </a>
+          </li>
+          <li class="nav__item header-nav__item">
+            <a href="#" class="nav__link header-nav__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="list-reset header__personal header-personal">
+        <li class="header-personal__item">
+          <a class="header-personal__link" href="#">
+            <svg class="header-personal__icon">
+                <use xlink:href="img/sprite.svg#fav"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="header-personal__item">
+          <a class="header-personal__link" href="#">
+            <svg class="header-personal__icon">
+                <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+            <span class="header-personal__counter items-count">
+              10 товаров
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>

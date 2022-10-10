@@ -1,0 +1,93 @@
+.hits {
+  &__container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+
+  &__heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--black);
+  }
+}
+
+.hits-swiper {
+  &__buttons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 75px;
+    width: 100%;
+  }
+
+  &__prev {
+    left: 0 !important;
+  }
+
+  &__next {
+    right: 0 !important;
+  }
+
+  &__next::after,
+  &__prev::after {
+    font-size: 25px !important;
+    color: var(--black);
+    transition: color .3s ease-in-out;
+  }
+
+  &__next:hover::after,
+  &__prev:hover::after {
+    color: var(--orange) !important;
+  }
+}
+
+.card {
+  padding: 20px 25px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    margin-top: auto;
+  }
+
+  &__heading {
+    margin-bottom: 25px;
+
+    & a {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--black);
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  &__old-price {
+    margin-right: 5px;
+    color: var(--orange);
+    text-decoration: line-through;
+  }
+}

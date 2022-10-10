@@ -1,0 +1,59 @@
+.banner {
+
+}
+
+.banner-swiper {
+
+  &__content {
+    position: absolute;
+    bottom: 40px;
+    right: 75px;
+    z-index: 2;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__buttons {
+    position: absolute;
+    width: 100px;
+    bottom: 275px;
+    right: 50px;
+  }
+}
+
+.banner-content {
+  max-width: 485px;
+  width: 100%;
+
+  &__heading {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white);
+    text-align: right;
+  }
+}
+
+.banner-swiper__next:after, .banner-swiper__prev:after {
+  font-size: 25px !important;
+  color: var(--white) !important;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+  }
+}
+
+.banner-swiper__prev:hover::after,
+.banner-swiper__next:hover::after {
+  color: var(--orange) !important;
+}

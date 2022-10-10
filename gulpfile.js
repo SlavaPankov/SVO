@@ -92,7 +92,7 @@ const svgSprites = () => {
 
 // scss styles
 const styles = () => {
-  return src(paths.srcScss, { sourcemaps: !isProd })
+  return src(paths.srcScss, {sourcemaps: !isProd})
     .pipe(plumber(
       notify.onError({
         title: "SCSS",
@@ -108,7 +108,7 @@ const styles = () => {
     .pipe(gulpif(isProd, cleanCSS({
       level: 2
     })))
-    .pipe(dest(paths.buildCssFolder, { sourcemaps: '.' }))
+    .pipe(dest(paths.buildCssFolder, {sourcemaps: '.'}))
     .pipe(browserSync.stream());
 };
 
@@ -146,20 +146,26 @@ const scripts = () => {
         filename: 'main.js',
       },
       module: {
-        rules: [{
-          test: /\.m?js$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                ['@babel/preset-env', {
-                  targets: "defaults"
-                }]
-              ]
+        rules: [
+          {
+            test: /\.m?js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  ['@babel/preset-env', {
+                    targets: "defaults"
+                  }]
+                ]
+              }
             }
+          },
+          {
+           test: /\.s?css$/,
+           use: ['style-loader', 'css-loader', 'sass-loader'],
           }
-        }]
+        ]
       },
       devtool: !isProd ? 'source-map' : false
     }))
@@ -275,8 +281,8 @@ const watchFiles = () => {
 
 const cache = () => {
   return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,avif,woff2}`, {
-      base: buildFolder
-    })
+    base: buildFolder
+  })
     .pipe(rev())
     .pipe(revDel())
     .pipe(dest(buildFolder))

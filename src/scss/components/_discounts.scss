@@ -1,0 +1,13 @@
+.discounts {
+  &__container {
+    padding-top: 45px;
+    padding-bottom: 75px;
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--black);
+  }
+}
