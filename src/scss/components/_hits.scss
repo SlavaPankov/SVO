@@ -49,10 +49,13 @@
 }
 
 .card {
-  padding: 20px 25px;
-  background-color: var(--white);
   display: flex;
   flex-direction: column;
+
+  &:hover .card__buy   {
+    opacity: 1;
+    margin-top: 0;
+  }
 
   &__link {
     margin-bottom: 30px;
@@ -89,5 +92,108 @@
     margin-right: 5px;
     color: var(--orange);
     text-decoration: line-through;
+  }
+
+  &__buy {
+    margin-top: 25px;
+    opacity: 0;
+    background-color: var(--white);
+    transition: opacity .3s ease-in-out, margin .3s ease-in-out;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__count {
+    width: 50%;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: var(--peach);
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: var(--black);
+    }
+  }
+
+  &__visible {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    background-color: var(--white);
+
+  }
+
+  &__input-count {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: var(--white);
+    transition: fill .3s ease-in-out;
+  }
+
+  &__count {
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-count {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  &__label-count {
+    width: 30%;
+  }
+
+  &__iteration {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    background-color: var(--gray);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: var(--dark-gray);
+    }
+  }
+
+  &__submit {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white);
   }
 }

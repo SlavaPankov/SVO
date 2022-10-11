@@ -13,6 +13,10 @@
 
   &__container {
     position: relative;
+
+    @include big-desktop {
+      max-width: 62.5vw;
+    }
   }
 
   &__buttons {
@@ -27,6 +31,10 @@
   max-width: 485px;
   width: 100%;
 
+  @include tablet {
+    max-width: 400px;
+  }
+
   &__heading {
     margin-bottom: 40px;
     font-size: 30px;
@@ -34,6 +42,10 @@
     color: var(--white);
     text-transform: uppercase;
     text-align: right;
+
+    @include tablet {
+      font-size: 26px;
+    }
   }
 
   &__text {
@@ -41,6 +53,10 @@
     font-weight: 400;
     color: var(--white);
     text-align: right;
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 }
 

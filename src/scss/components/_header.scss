@@ -53,9 +53,14 @@
 }
 
 .header-nav {
+  margin-right: 20px;
   display: inline-block;
   max-width: 910px;
   width: 100%;
+
+  @include tablet {
+    max-width: 810px;
+  }
 
   &__list {
     display: flex;
@@ -84,6 +89,10 @@
     font-weight: 400;
     color: var(--black);
     transition: color .3s ease-in-out;
+
+    @include tablet {
+      font-size: 15px;
+    }
 
     &:hover {
       color: var(--orange);
@@ -116,6 +125,10 @@
     font-weight: 400;
     color: var(--black);
     transition: color .3s ease-in-out;
+
+    @include tablet {
+      font-size: 15px;
+    }
   }
 
   &__icon {
@@ -131,5 +144,6 @@
 
   &__counter {
     margin-left: 10px;
+    white-space: nowrap;
   }
 }
