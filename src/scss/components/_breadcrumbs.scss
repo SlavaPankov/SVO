@@ -1,0 +1,34 @@
+.breadcrumbs {
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 0;
+    }
+  }
+
+}

@@ -1,0 +1,125 @@
+.h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 35px;
+}
+
+.filters {
+  &__container {
+    padding-bottom: 15px;
+  }
+}
+
+.filters-form {
+  padding: 25px 20px;
+  background-color: var(--white);
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  &__slider {
+    max-width: 430px;
+    width: 100%;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 80px;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+    width: 100%;
+    margin-right: 65px;
+  }
+
+  &__input {
+    max-width: 100%;
+    padding:10px;
+    font-family: "CeraPro", "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    background-color: var(--gray-F5);
+    text-align: right;
+    border: 1px solid var(--gray-DF);
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+}
+
+.noUi-horizontal {
+  height: 1px !important;
+}
+
+.noUi-connect {
+  background: var(--black) !important;
+}
+
+.noUi-target {
+  background: var(--gray-DF);
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 14px !important;
+  height: 14px !important;
+  right: -5px !important;
+}
+
+.noUi-handle {
+  border-radius: 100% !important;
+  border: none !important;
+  background: var(--black) !important;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+  display: none !important;
+}
+
+.w-fit {
+  max-width: fit-content;
+  margin-right: 0;
+  justify-content: flex-start;
+}

@@ -1,0 +1,9 @@
+.catalog {
+  &__container {
+    padding-top: 15px;
+    padding-bottom: 45px;
+    gap: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

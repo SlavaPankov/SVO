@@ -48,6 +48,7 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -201,4 +202,12 @@
     font-weight: 400;
     color: var(--white);
   }
+}
+
+.pos-absolute {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
