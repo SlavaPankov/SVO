@@ -3,6 +3,10 @@
   &__container {
     padding-top: 45px;
     padding-bottom: 55px;
+
+    @include small-tablet {
+      padding-bottom: 30px;
+    }
   }
 
   &__top {
@@ -10,6 +14,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
+
+    @include small-tablet {
+      align-items: flex-start;
+    }
   }
 
   &__bottom {
@@ -23,6 +31,10 @@
     font-size: 12px;
     font-weight: 400;
     color: var(--black);
+
+    @include small-tablet {
+      font-size: 10px;
+    }
   }
 }
 
@@ -30,10 +42,20 @@
   &__list {
     display: flex;
     align-items: center;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__item:not(:last-child) {
     margin-right: 15px;
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 
   &__link {
@@ -45,6 +67,10 @@
 
     &:hover {
       border-color: var(--black);
+    }
+
+    @include small-tablet {
+      font-size: 14px;
     }
   }
 }

@@ -1,9 +1,14 @@
 .header {
   background-color: var(--white);
+  position: relative;
 
   &__container {
     padding-top: 41px;
     padding-bottom: 41px;
+
+    @include small-tablet {
+      padding-bottom: 25px;
+    }
   }
 
   &__top {
@@ -17,10 +22,35 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 15px;
+    transition: transform .3s ease-in-out;
+
+    @include small-tablet {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      height: 100vw;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      z-index: 3;
+      background-color: var(--white);
+      transform: translateX(-101%);
+      justify-content: flex-start;
+    }
   }
 
   &__logo {
     margin-left: auto;
+
+    @include small-tablet {
+      margin: 0 auto;
+    }
+  }
+
+  &__burger {
+    @include small-tablet {
+      display: none;
+    }
   }
 }
 
@@ -31,6 +61,10 @@
 
 .header-social {
   margin-left: auto;
+
+  @include small-tablet {
+    display: none;
+  }
 
   &__list {
     display: flex;
@@ -50,6 +84,16 @@
       fill: var(--orange);
     }
   }
+
+  &--mobile {
+    display: none;
+
+    @include small-tablet {
+      display: block;
+      margin-left: 0;
+      margin-top: auto;
+    }
+  }
 }
 
 .header-nav {
@@ -62,12 +106,22 @@
     max-width: 810px;
   }
 
+  @include small-tablet {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 910px;
     width: 100%;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__item {
@@ -81,6 +135,12 @@
     &:hover .header__burger::after,
     &:hover .header__burger::before {
       background-color: var(--orange);
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include small-tablet {
+      margin-bottom: 10px;
     }
   }
 
@@ -146,4 +206,21 @@
     margin-left: 10px;
     white-space: nowrap;
   }
+}
+
+.menu-burger {
+  @include burger;
+  display: none;
+
+  &::after {
+    width: 100%;
+  }
+
+  @include small-tablet {
+    display: block;
+  }
+}
+
+.menu-open {
+  transform: none;
 }

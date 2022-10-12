@@ -12,6 +12,24 @@ if (document.querySelector('.hits-swiper')) {
     navigation: {
       prevEl: '.hits-swiper__prev',
       nextEl: '.hits-swiper__next'
+    },
+
+    breakpoints: {
+      1024: {
+        slidesPerView: 4
+      },
+
+      768: {
+        slidesPerView: 3
+      },
+
+      576: {
+        slidesPerView: 2
+      },
+
+      320: {
+        slidesPerView: 1,
+      }
     }
   });
 }
