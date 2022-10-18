@@ -51,6 +51,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  transition: box-shadow .3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 50px 20px rgb(0 0 0 / 15%);
+  }
 
   &:hover .card__buy   {
     opacity: 1;
@@ -89,9 +94,15 @@
   &__price {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 16px;
     font-weight: 400;
     color: var(--black);
+  }
+
+  &__price-wrapper {
+    display: flex;
+    align-items: center;
   }
 
   &__old-price {
@@ -201,6 +212,21 @@
     font-size: 16px;
     font-weight: 400;
     color: var(--white);
+  }
+
+  &__fav-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--black);
+    transition: fill .3s ease-in-out;
+  }
+
+  &__fav-btn {
+    cursor: pointer;
+
+    &:hover .card__fav-icon {
+      fill: var(--orange);
+    }
   }
 }
 

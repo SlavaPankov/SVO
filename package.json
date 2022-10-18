@@ -58,7 +58,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "inputmask": "^5.0.7",
+    "jquery": "^3.6.1",
     "just-validate": "^3.3.3",
     "nouislider": "^15.6.1",
     "smooth-scroll": "^16.1.3",
